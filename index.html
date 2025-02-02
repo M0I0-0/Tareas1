@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" type="image/x-icon" href="icono.ico">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="calen.js" defer></script>
+    <script src="notes.js" defer></script>
+    <script src="work.js" defer></script>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <input type="text" id="taskInput" placeholder="Nueva tarea">
+    <div class="date-container">
+        <input type="date" id="taskDate">
+    </div>
+    
+    <button onclick="addTask()">Agregar</button>
+    <ul id="taskList"></ul>
+
+    <div class="main-container">
+        <div class="notes-container">
+            <h2>Notas Importantes</h2>
+            <textarea id="notes" placeholder="Escribe tus notas aquí..."></textarea>
+        </div>
+    
+        <div class="calendar-container">
+            <div id="calendar"></div>
+        </div>
+    </div>
+    <div class="schedule-container">
+        <h2>Horario de Clases</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8:00 - 9:00 </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Base de Datos</td>
+                </tr>
+                <tr>
+                    <td>9:00 - 10:00</td>
+                    <td>IngenierÍa en Software</td>
+                    <td>Redes</td>
+                    <td>Base de Datos</td>
+                    <td>IngenierÍa en Software</td>
+                    <td>Base de Datos</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td>Ingenieria en Software</td>
+                    <td>Redes</td>
+                    <td>Base de Datos</td>
+                    <td>IngenierÍa en Software</td>
+                    <td>Base de Datos</td>
+                </tr>
+                <tr>
+                    <td>11:00 - 12:00</td>
+                    <td>Lenguaje y Autómotas I</td>
+                    <td>Redes</td>
+                    <td>Cultura Empresarial</td>
+                    <td>IngenierÍa en Software</td>
+                    <td>Redes</td>
+                </tr>                <tr>
+                    <td>12:00 - 1:00</td>
+                    <td>Lenguaje y Autómotas I</td>
+                    <td>Lenguaje de Interfaz</td>
+                    <td>Cultura Empresarial</td>
+                    <td>Cultura Empresarial</td>
+                    <td>Redes</td>
+                </tr>                <tr>
+                    <td>1:00 - 2:00</td>
+                    <td>Lenguaje y Autómotas I</td>
+                    <td>Lenguaje de Interfaz</td>
+                    <td>Lenguaje y Autómotas I</td>
+                    <td>Cultura Empresarial</td>
+                    <td>Lenguaje de Interfaz</td>
+                </tr>                <tr>
+                    <td>2:00 - 3:00</td>
+                    <td></td>
+                    <td></td>
+                    <td>Lenguaje y Autómotas I</td>
+                    <td></td>
+                    <td>Lenguaje de Interfaz</td>
+                </tr>                <tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

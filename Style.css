@@ -1,0 +1,211 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px; 
+    margin: auto;
+    padding: 20px;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+input, button {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input {
+    background: #1e1e1e;
+    color: #fff;
+    border: 1px solid #333;
+    outline: none;
+}
+
+button {
+    background: #6200ea;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #3700b3;
+}
+
+/* Lista de tareas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.task:hover {
+    transform: scale(1.02);
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-button, .delete-button {
+    background: #ff4c4c;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    width: 35px;
+}
+
+.edit-button {
+    background: #fbc02d;
+}
+
+.edit-button:hover {
+    background: #f9a825;
+}
+
+.delete-button:hover {
+    background: #d32f2f;
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    flex-wrap: nowrap; 
+    align-items: flex-start; 
+}
+
+
+.notes-container, .calendar-container {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.notes-container textarea {
+    width: 100%;
+    height: 426px; 
+    max-height: 600px;
+    min-height: 200px;
+    resize: none; 
+    background: #252525;
+    border: 1px solid #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    max-width: 50%; 
+    width: 100%;
+    height: 100%;
+}
+
+#calendar {
+    background: rgb(3, 3, 3);
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+.schedule-container {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background: #6200ea;
+    color: white;
+}
+
+.schedule-table td {
+    background: #252525;
+}
+
+.schedule-table .today {
+    background: #fbc02d;
+    color: black;
+    font-weight: bold;
+}
+.date-container {
+    position: relative;
+    display: inline-block;
+}
+
+.date-container input {
+    padding-right: 0px; 
+}
+
+.date-container::after {
+    content: "📅"; 
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
